@@ -1,11 +1,13 @@
-function App() {
-  const [count, setCount] = useState(0)
+import logo from './assets/logo.svg';
 
-  return (
-    <>
-      <h1>Poupapp</h1>
-    </>
-  )
+function App() {
+    return (
+        <>
+            <aside>
+                <img src={logo} alt="" />
+            </aside>
+        </>
+    );
 }
 
-export default App
+export default App;
