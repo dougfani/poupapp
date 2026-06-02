@@ -21,3 +21,10 @@
 body {
     background-color: var(--neutral-background);
 }
+
+section {
+    max-width: 894px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
