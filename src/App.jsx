@@ -8,54 +8,58 @@ import Card from './components/Card';
 import { DailyBudget } from './components/DailyBudget';
 import { SavingStatus } from './components/SavingsStatus';
 
+import styles from './app.module.css'
+
 function App() {
     return (
         <Container>
             <Aside />
             <Main>
-                <SearchInput placeholder={'Procure seu dinheiro...'} />
-                <div>
-                    <Typography variant='h1'>
-                        Olá, Douglas!
-                    </Typography>
-                    <Typography variant='body'>
-                        Veja como estão suas finanças hoje.
-                    </Typography>
+                <div className={styles.container}>
+                    <SearchInput placeholder={'Procure seu dinheiro...'} />
+                    <div>
+                        <Typography variant='h1'>
+                            Olá, Douglas!
+                        </Typography>
+                        <Typography variant='body'>
+                            Veja como estão suas finanças hoje.
+                        </Typography>
+                    </div>
+                    <section className={styles.grid}>
+                        <Card>
+                            <Card.Header>
+                                Orçamento diário disponível:
+                            </Card.Header>
+                            <Card.Body>
+                                <DailyBudget value={200}></DailyBudget>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Header>
+                                Progresso da meta financeira
+                            </Card.Header>
+                            <Card.Body>
+                                <SavingStatus percent={40}/>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Header>
+                                Movimentação financeira
+                            </Card.Header>
+                            <Card.Body>
+                                R$ 200
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Header>
+                                Minhas contas
+                            </Card.Header>
+                            <Card.Body>
+                                R$ 200
+                            </Card.Body>
+                        </Card>                                                            
+                    </section>
                 </div>
-                <section>
-                    <Card>
-                        <Card.Header>
-                            Orçamento diário disponível:
-                        </Card.Header>
-                        <Card.Body>
-                            <DailyBudget value={200}></DailyBudget>
-                        </Card.Body>
-                    </Card>
-                    <Card>
-                        <Card.Header>
-                            Progresso da meta financeira
-                        </Card.Header>
-                        <Card.Body>
-                            <SavingStatus percent={40}/>
-                        </Card.Body>
-                    </Card>
-                    <Card>
-                        <Card.Header>
-                            Movimentação financeira
-                        </Card.Header>
-                        <Card.Body>
-                            R$ 200
-                        </Card.Body>
-                    </Card>
-                    <Card>
-                        <Card.Header>
-                            Minhas contas
-                        </Card.Header>
-                        <Card.Body>
-                            R$ 200
-                        </Card.Body>
-                    </Card>                                                            
-                </section>
             </Main>
         </Container>
     );
