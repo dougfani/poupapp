@@ -6,6 +6,7 @@ import { Typography } from './components/Typography';
 
 import Card from './components/Card';
 import { DailyBudget } from './components/DailyBudget';
+import { SavingStatus } from './components/SavingsStatus';
 
 function App() {
     return (
@@ -32,7 +33,15 @@ function App() {
                     </Card>
                     <Card>
                         <Card.Header>
-                            Orçamento diário disponível:
+                            Progresso da meta financeira
+                        </Card.Header>
+                        <Card.Body>
+                            <SavingStatus percent={40}/>
+                        </Card.Body>
+                    </Card>
+                    <Card>
+                        <Card.Header>
+                            Movimentação financeira
                         </Card.Header>
                         <Card.Body>
                             R$ 200
@@ -40,15 +49,7 @@ function App() {
                     </Card>
                     <Card>
                         <Card.Header>
-                            Orçamento diário disponível:
-                        </Card.Header>
-                        <Card.Body>
-                            R$ 200
-                        </Card.Body>
-                    </Card>
-                    <Card>
-                        <Card.Header>
-                            Orçamento diário disponível:
+                            Minhas contas
                         </Card.Header>
                         <Card.Body>
                             R$ 200
