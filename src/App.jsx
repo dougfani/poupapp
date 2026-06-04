@@ -8,8 +8,9 @@ import Card from './components/Card';
 import { DailyBudget } from './components/DailyBudget';
 import { SavingStatus } from './components/SavingsStatus';
 
-import styles from './app.module.css'
+import styles from './app.module.css';
 import { Transactions } from './components/Transactions';
+import { Accounts } from './components/Accounts';
 
 function App() {
     return (
@@ -19,46 +20,34 @@ function App() {
                 <div className={styles.container}>
                     <SearchInput placeholder={'Procure seu dinheiro...'} />
                     <div>
-                        <Typography variant='h1'>
-                            Olá, Douglas!
-                        </Typography>
-                        <Typography variant='body'>
-                            Veja como estão suas finanças hoje.
-                        </Typography>
+                        <Typography variant="h1">Olá, Douglas!</Typography>
+                        <Typography variant="body">Veja como estão suas finanças hoje.</Typography>
                     </div>
                     <section className={styles.grid}>
                         <Card>
-                            <Card.Header>
-                                Orçamento diário disponível:
-                            </Card.Header>
+                            <Card.Header>Orçamento diário disponível:</Card.Header>
                             <Card.Body>
                                 <DailyBudget value={200}></DailyBudget>
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header>
-                                Progresso da meta financeira
-                            </Card.Header>
+                            <Card.Header>Progresso da meta financeira</Card.Header>
                             <Card.Body>
-                                <SavingStatus percent={40}/>
+                                <SavingStatus percent={40} />
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header>
-                                Movimentação financeira
-                            </Card.Header>
+                            <Card.Header>Movimentação financeira</Card.Header>
                             <Card.Body>
                                 <Transactions />
                             </Card.Body>
                         </Card>
                         <Card>
-                            <Card.Header>
-                                Minhas contas
-                            </Card.Header>
+                            <Card.Header>Minhas contas</Card.Header>
                             <Card.Body>
-                                R$ 200
+                                <Accounts />
                             </Card.Body>
-                        </Card>                                                            
+                        </Card>
                     </section>
                 </div>
             </Main>
